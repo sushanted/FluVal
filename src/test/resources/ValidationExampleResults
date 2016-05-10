@@ -1,0 +1,24 @@
+Validation: Failed
+	Expected : Salary ShouldBeGreaterThan 20000
+	Actual   : 20000
+
+Validation: Passed
+	Expected : Name ShouldNotBeBlank 
+	Actual   : pater
+
+Validation: Failed
+	Expected : Address ShouldNotBeBlank 
+	Actual   : 
+
+Validation: Passed
+	Expected : Age ShouldBeInInclusiveRange  (21,50)
+	Actual   : 45
+
+Validation: PreConditionNotMet
+Pre condition:Sex Is male
+	Expected : Age ShouldBeLessThan 40
+	Actual   : 45
+
+Validation: NullValueOperation
+	Expected : Phone ShouldMatch syntax: only digits.
+	Actual   : null
