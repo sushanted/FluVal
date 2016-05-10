@@ -1,7 +1,7 @@
 # FluVal
 
 
-Validation framework where one can write English statement like validations:
+It is a light-weight Fluent Validation framework for java using which one can write English-statement-like-validations:
 
 e.g.
 
