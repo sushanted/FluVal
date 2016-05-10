@@ -5,11 +5,15 @@ It is a light-weight Fluent Validation framework for java, using which one can w
 
 e.g.
 
+validator.valueOfField("name", person.getName()).shouldNotBeBlank();
+
 validator.valueOfField("age", person.getAge()).shouldBeNumeric();
 
 validator.valueOfField("age", person.getAge()).shouldBeInInclusiveRange(18,60);
 
-validator.ifValueOfField("sex", person.getSex()).is("male").thenValueOfField(person.getAge()).shouldBeGreaterThan(21);
+validator.valueOfField("sex", person.getSex()).shouldBeOneOfInAnyCase("Male","Female");
+
+validator.ifValueOfField("sex", person.getSex()).isInAnyCase("male").thenValueOfField(person.getAge()).shouldBeGreaterThan(21);
 
 The validation results are propagated to the listener, which can take appropriate actions.
 
